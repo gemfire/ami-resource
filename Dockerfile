@@ -23,6 +23,6 @@ FROM alpine:${ALPINE_VERSION}
 COPY --from=awsclibuilder /usr/local/lib/aws-cli/ /usr/local/lib/aws-cli/
 RUN ln -s /usr/local/lib/aws-cli/aws /usr/local/bin/aws
 
-RUN apk --no-cache add jq
+RUN apk --no-cache add jq uuidgen
 
 ADD bin /opt/resource
